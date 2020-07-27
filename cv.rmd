@@ -48,7 +48,7 @@ Aside
 ```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data %>% dplyr::filter(section != "training"))
+datadrivencv::build_network_logo(CV$entries_data %>% dplyr::filter(section != "training", section != "research_positions"))
 ```
 
 
@@ -122,8 +122,9 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
-Research Experience {data-icon=laptop}
+<!-- Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
+-->
 
 <!-- ::: aside
 ```{r}
@@ -131,10 +132,10 @@ CV %<>% print_text_block('research_experience_aside')
 ```
 ::: -->
 
-```{r}
+<!--```{r}
 CV %<>% print_section('research_positions')
 ```
-
+-->
 
 
 Teaching Experience {data-icon=chalkboard-teacher}
